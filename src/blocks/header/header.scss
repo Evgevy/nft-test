@@ -1,0 +1,194 @@
+.header {
+    background: #1D2532;
+    &__content {
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 30px 10px 100px;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    &__logo {
+        position: relative;
+        svg {
+            position: relative;
+        }
+    }
+
+    &__logo::before {
+        content: url(../img/fon.png);
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        top: -30px;
+        left: -320px;
+        
+    }
+
+    &__links {
+        display: flex;
+        gap: 0 105px;
+        margin-left: auto;
+        margin-right: 150px;
+        font-family: 'Inter';
+        font-size: 23px;
+        line-height: 120%;
+        color: #CECECE;
+        transition: .2s;
+    }
+
+    &__link:hover {
+        color: #FFFFFF;
+
+    }
+
+    &__button {
+        width: 175px;
+        height: 51px;
+        border: 1px solid #FFFFFF;
+        border-radius: 15px;
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        transition: .2s;
+        &--active {
+            background: rgba(224, 255, 172, 0.05);
+            border: 1px solid rgba(195, 243, 59, 1);
+            color:rgba(195, 243, 59, 1);
+        }
+    }
+
+    &__button:hover {
+        border: 1px solid rgba(195, 243, 59, 1);
+        color:rgba(195, 243, 59, 1);
+    }
+
+    &__log {
+        display: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__links {
+            font-size: 20px;
+            gap: 0 50px;
+            margin-right: 80px;
+        }
+    
+    }
+
+    @media screen and (max-width: 768px) {
+        
+        &__burger {
+            width: 40px;
+            height: 40px;
+            @include flex-dir;
+            position: absolute;
+            right: 20px;
+            top: 45px;
+            padding-right: 10px;
+           
+        }
+
+        &__line {
+            transition: all 0.3s;
+            height: 4px;
+            background-color: #FBF7FE;
+            display: block;
+            width: 40px;
+            margin: 5px;
+            border-radius: 10px;
+        }
+
+        &__line {
+            &--first {
+                transform: translate(8px, -5px) rotate(45deg);
+                transform-origin: left top;
+                height: 3px;
+                background-color: #FBF7FE;
+                width: 30px;
+            }
+        }
+
+        &__line {
+            &--last {
+                transform: translate(-2px, -20px) rotate(-45deg);
+                transform-origin: right bottom;
+                height: 3px;
+                width: 30px;
+                background-color: #FBF7FE;
+            }
+        }
+
+        &__links {
+            display: none;
+            &--open {
+                display: flex;
+                flex-direction: column;
+                gap: 20px 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #293344;
+                position: absolute;
+                height: 80vh;
+                padding-top: 30px;
+                padding-left: 30px;
+                margin: 0;
+                border-radius: 0px 0px 0px 30px;
+                
+            }
+
+        }
+
+        &__button {
+            display: none;
+            &--hide {
+                display: block;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                margin-top: 350px;
+                margin-left: 30px;
+               
+            }
+        }
+
+        &__log {
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        
+    }
+
+    @media screen and (max-width: 425px) {
+        &__logo::before {
+            content: url(../img/fon.png);
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: -30px;
+            left: -150px;
+            overflow: hidden;
+            border-radius: 20px;
+            filter: blur(60px);
+        }
+
+        &__links--open {
+            margin-left: 10px;
+        }
+
+    }
+  
+}

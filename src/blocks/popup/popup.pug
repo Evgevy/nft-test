@@ -1,0 +1,15 @@
+mixin popup(modifier)
+  .popup&attributes(attributes)
+    .popup.popup--hide 
+    .popup__content
+      .popup__titles 
+        .popup__one
+          h2.popup__title Начни прямо сейчас!
+          p.popup__text Получи все нужные навыки для заработка на NFT всего за 28 дней!
+        .popup__close
+          include img/closed.svg
+      .popup__contacts 
+        form.popup__form 
+          input(type="text" placeholder="E-mail").popup__input
+          button(type="submit").popup__btn Оплатить
+    .popup__background

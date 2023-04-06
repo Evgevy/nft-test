@@ -1,0 +1,174 @@
+.main {
+    background: #1D2532;
+    margin: -10px 0 121px;
+
+    &__content {
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding-bottom: 134px;
+    }
+
+    &__title {
+        font-family: 'Inter';
+        font-size: 72px;
+        line-height: 105%;
+        letter-spacing: -0.03em;
+        color: #FFFFFF;
+        width: 717px;
+        margin: 0 0 20px;
+        position: relative;
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &__title::after {
+        content: url(../img/ball.svg);
+        position: absolute;
+        top: -50px;
+        left: 470px;
+    }
+
+    &__text {
+        font-family: 'Inter';
+        font-size: 23px;
+        line-height: 120%;
+        color: #CECECE;
+        width: 500px;
+        margin-bottom: 67px;
+    }
+
+    &__btn {
+        width: 331px;
+        height: 66px;
+        background: linear-gradient(92.84deg, #1DD844 1.44%, #CBF62E 126.29%);
+        box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        font-family: 'GTWalsheimPro-Medium';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        color: #242424;
+        transition: .2s;
+        &--active {
+            box-shadow: 0 0 12px  rgba(195, 243, 59, 1);
+        }
+    }
+
+    &__btn:hover {
+        box-shadow: 0 0 12px  rgba(195, 243, 59, 1);
+    }
+
+    &__img {
+        background-image: url(../img/fone.svg);
+        background-position: center 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-width: 100%;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    &__picture {
+        position: relative;
+    }
+
+    &__picture::before {
+        content: url(../img/light.svg);
+        position: absolute;
+        top: 60%;
+        left: -50px;
+    }
+
+    &__picture::after {
+        content: url(../img/green.svg);
+        position: absolute;
+        top: 0;
+        left: 70%;
+    }
+
+    &__image {
+        display: none;
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__title {
+            font-size: 45px;
+            width: 100%;
+            position: static;
+        }
+
+        &__text {
+            font-size: 20px;
+            width: 100%;
+        }
+
+        &__title::after {
+            content: '';
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        text-align: center;
+        &__inner {
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+
+        
+        &__picture {
+            display: none;
+        }
+
+        &__picture::before,
+        &__picture::after {
+            content: '';
+        }
+
+        &__image {
+            display: block;
+            width: 700px;
+            margin: 0 auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        &__title {
+            font-size: 40px;
+        }
+
+        
+    }
+
+    @media screen and (max-width: 425px) {
+        &__title {
+            font-size: 25px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__btn {
+            width: 277px;
+            height: 51px;
+            font-size: 16px;
+        }
+
+
+    }
+
+    
+    
+
+
+   
+  
+}

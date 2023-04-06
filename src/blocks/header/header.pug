@@ -1,0 +1,15 @@
+mixin header(modifier)
+  header.header&attributes(attributes)
+    .header__content 
+      .header__nav 
+        a(href="").header__logo 
+          include img/logo.svg
+        .header__links 
+          a(href="").header__log
+            include img/logo.svg
+          a(href="").header__link Главная 
+          a(href="").header__link Что даст обучение
+        button(type="button").header__button Личный кабинет
+      .header__burger
+        .header__line 
+        .header__line
