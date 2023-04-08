@@ -22,13 +22,16 @@
     }
 
     &__logo::before {
-        content: url(../img/fon.png);
+        content: '';
+        background-image: url(../img/fon.png);
+        background-position: 100px center;
+        border-radius: 10%;
+        filter: blur(50px);
         position: absolute;
-        width: 400px;
+        width: 500px;
         height: 400px;
         top: -30px;
         left: -320px;
-        
     }
 
     &__links {

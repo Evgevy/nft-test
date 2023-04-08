@@ -169,10 +169,7 @@
 
     @media screen and (max-width: 768px) {
         &__content::before {
-            width: 200px;
-            height: 200px;
-            left: 40%;
-            filter: blur(30px);
+            display: none;
         }
 
         &__content svg {
@@ -201,9 +198,7 @@
     }
 
     @media screen and (max-width: 360px) {
-        &__content::before {
-            display: none;
-        }
+       
 
         &__content svg {
             top: -50px;
