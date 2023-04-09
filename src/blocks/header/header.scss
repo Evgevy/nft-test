@@ -1,4 +1,5 @@
 .header {
+    
     background: #1D2532;
     &__content {
         max-width: 1300px;
@@ -32,6 +33,7 @@
         height: 400px;
         top: -30px;
         left: -320px;
+        cursor: default;
     }
 
     &__links {
@@ -84,7 +86,6 @@
             gap: 0 50px;
             margin-right: 80px;
         }
-    
     }
 
     @media screen and (max-width: 768px) {
